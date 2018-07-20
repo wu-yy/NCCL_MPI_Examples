@@ -19,6 +19,6 @@ int main(){
 
 	subject[0][0]=1;
 	printf("%d",subject[0][0]);
-  
+	
 	return 0;
 }

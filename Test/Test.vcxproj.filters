@@ -27,6 +27,18 @@
     <ClCompile Include="mpi_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="mpi_test2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mpi_gather.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mpi_bcast.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="multipleDevicesPerThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="READ.md">
