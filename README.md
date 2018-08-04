@@ -15,5 +15,5 @@ nvcc -o first_cuda singleProcess.cpp  -I/usr/local/nccl/include -L/usr/local/ncc
 mpicc -o3 oneDevicePerprocess.cpp -o cpi -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart -lcuda  -I/usr/local/nccl/include -L/usr/local/nccl/lib -l nccl
 
 
-#使用 run.sh 编译运行文件
+#使用 run.sh 编译文件
 ./run.sh [source.cpp]  output

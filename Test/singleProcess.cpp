@@ -9,9 +9,9 @@
 #define CUDACHECK(cmd) do {                         \
   cudaError_t e = cmd;                              \
   if( e != cudaSuccess ) {                          \
-    printf("Failed: Cuda error %s:%d '%s'\n",             \
-        __FILE__,__LINE__,cudaGetErrorString(e));   \
-    exit(1);                             \
+	printf("Failed: Cuda error %s:%d '%s'\n",             \
+		__FILE__,__LINE__,cudaGetErrorString(e));   \
+	exit(1);                             \
   }                                                 \
 } while(0)
 
@@ -56,26 +56,26 @@ int main(int argc,char**argv){
 
 	for (int i = 0; i < nDev; ++i)
 		NCCLCHECK(ncclAllReduce((const void*)sendbuff[i], (void*)recvbuff[i], size, ncclFloat, ncclSum,
-        comms[i], s[i]));
+		comms[i], s[i]));
 	
 	NCCLCHECK(ncclGroupEnd());
 
   //synchronizing on CUDA streams to wait for completion of NCCL operation
   for (int i = 0; i < nDev; ++i) {
-    CUDACHECK(cudaSetDevice(i));
-    CUDACHECK(cudaStreamSynchronize(s[i]));
+	CUDACHECK(cudaSetDevice(i));
+	CUDACHECK(cudaStreamSynchronize(s[i]));
   }
 
   //free device buffers
   for (int i = 0; i < nDev; ++i) {
-    CUDACHECK(cudaSetDevice(i));
-    CUDACHECK(cudaFree(sendbuff[i]));
-    CUDACHECK(cudaFree(recvbuff[i]));
+	CUDACHECK(cudaSetDevice(i));
+	CUDACHECK(cudaFree(sendbuff[i]));
+	CUDACHECK(cudaFree(recvbuff[i]));
   }
 
   //finalizing NCCL
   for(int i = 0; i < nDev; ++i)
-      ncclCommDestroy(comms[i]);
+	  ncclCommDestroy(comms[i]);
 
   printf("Success \n");
 

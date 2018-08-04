@@ -39,12 +39,30 @@
     <ClCompile Include="multipleDevicesPerThread.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="nccl_reduce.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="STL_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mpi_thread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mpi_comm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cuda_devices.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="READ.md">
       <Filter>资源文件</Filter>
     </None>
     <None Include="run.sh">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="++run.sh">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>

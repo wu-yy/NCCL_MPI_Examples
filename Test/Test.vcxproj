@@ -78,16 +78,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cuda_devices.cpp" />
     <ClCompile Include="mpi_bcast.cpp" />
+    <ClCompile Include="mpi_comm.cpp" />
     <ClCompile Include="mpi_gather.cpp" />
     <ClCompile Include="mpi_test.cpp" />
     <ClCompile Include="mpi_test2.cpp" />
+    <ClCompile Include="mpi_thread.cpp" />
     <ClCompile Include="multipleDevicesPerThread.cpp" />
+    <ClCompile Include="nccl_reduce.cpp" />
     <ClCompile Include="oneDevicePerprocess.cpp" />
     <ClCompile Include="singleProcess.cpp" />
+    <ClCompile Include="STL_test.cpp" />
     <ClCompile Include="test2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="++run.sh" />
     <None Include="READ.md" />
     <None Include="run.sh" />
   </ItemGroup>
