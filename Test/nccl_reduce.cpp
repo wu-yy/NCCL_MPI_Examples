@@ -1,4 +1,4 @@
-//测试NCCL的reduce
+//测试NCCL的单机上面的reduce
 #include<stdio.h>
 #include <malloc.h>
 #include<stdlib.h>
@@ -25,9 +25,7 @@
 
 int main(int argc,char**argv){
 	printf("begin run main...\n");
-
-	ncclComm_t comms[1];
-
+	ncclComm_t comms[4];
 	//manageing 1 devices
 	int nDev=4;
 	int size=32;
